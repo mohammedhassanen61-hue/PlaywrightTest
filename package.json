@@ -10,12 +10,9 @@
     "ng": "ng",
     "start": "ng serve"
   },
-   "overrides": {
-    "stylus": "github:stylus/stylus#0.54.5"
-  },
   "dependencies": {
     "@angular/animations": "^14.2.12",
-    "@angular/cdk": "12.1.0",
+    "@angular/cdk": "14.2.7",
     "@angular/common": "^14.2.12",
     "@angular/compiler": "^14.2.12",
     "@angular/core": "^14.2.12",
@@ -55,12 +52,19 @@
     "web-animations-js": "^2.3.2",
     "zone.js": "~0.11.4"
   },
+  "overrides": {
+    "@types/ws": "8.5.4",
+    "d3-array": "2.12.1",
+    "@babel/helper-module-transforms": "7.18.9",
+    "@babel/helper-remap-async-to-generator": "7.18.9",
+    "@babel/helper-plugin-utils": "7.18.9",
+    "@babel/plugin-transform-regenerator": "7.18.6"
+  },
   "devDependencies": {
     "@angular-devkit/build-angular": "^14.2.10",
     "@angular/cli": "^14.2.10",
     "@angular/compiler-cli": "^14.2.12",
     "@angular/language-service": "14.2.12",
-    "@compodoc/compodoc": "^1.1.19",
     "@fortawesome/fontawesome-free": "^5.2.0",
     "@types/leaflet": "1.2.3",
     "@types/node": "^12.12.70",
