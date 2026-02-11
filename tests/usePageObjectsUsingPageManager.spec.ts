@@ -4,7 +4,7 @@ import {faker} from "@faker-js/faker"
 
 
 test.beforeEach(async ({page})=> {
-   await page.goto('/') //here we put the url as variable in playwright config file in BaseUrl: and this ('/') this expressions tells playwright to get the url from baseUrl
+   await page.goto('http://localhost:4200/') //here we put the url as variable in playwright config file in BaseUrl: and this ('/') this expressions tells playwright to get the url from baseUrl
 
 })
 
