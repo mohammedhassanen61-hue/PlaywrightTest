@@ -1,5 +1,5 @@
 import {test,expect} from "@playwright/test";
-import { stat } from "fs";
+import { argosScreenshot } from "@argos-ci/playwright";
 
 test.beforeEach(async ({page})=> {
    await page.goto('http://uitestingplayground.com/ajax')
@@ -30,5 +30,6 @@ await page.waitForSelector('.bg-success')
 //await page.waitForLoadState("networkidle")
 
 expect(successButton).toHaveText('Data loaded with AJAX get request.')
+await argosScreenshot(page, "homepage");
 
 })
