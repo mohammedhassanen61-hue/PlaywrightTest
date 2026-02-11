@@ -9,7 +9,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "usePageObjects-chro": "npx playwright test usePageObjectsUsingPageManager.spec.ts --project=chromium",
+    "usePageObjects-chro": "npx playwright test autoWaiting.spec.ts --project=chromium",
     "usePageObjects-fire": "npx playwright test usePageObjectsUsingPageManager.spec.ts --project=firefox --headed",
     "usePageObjects-all": "npm run usePageObjects-chro & npm run usePageObjects-fire"
   },
