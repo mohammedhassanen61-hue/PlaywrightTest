@@ -41,7 +41,7 @@ await pm.onDatePickerPage().selectCommonDatePickerRangeFromToday(15,30)
 
 })
 
-test.only('testing with argos ci', async({page})=>{
+test('testing with argos ci', async({page})=>{
     const pm= new PageManager(page)
     const randomFullname=faker.person.fullName()
     const randomMail=`${randomFullname.replace(' ','')}${faker.number.int(10)}@test.com`
