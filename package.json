@@ -8,7 +8,10 @@
   },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve"
+    "start": "ng serve",
+    "usePageObjects-chro": "npx playwright test usePageObjectsUsingPageManager.spec.ts --project=chromium --headed",
+    "usePageObjects-fire": "npx playwright test usePageObjectsUsingPageManager.spec.ts --project=firefox --headed",
+    "usePageObjects-all": "npm run usePageObjects-chro & npm run usePageObjects-fire"
   },
   "dependencies": {
     "@angular/animations": "^14.2.12",
@@ -65,7 +68,9 @@
     "@angular/cli": "^14.2.10",
     "@angular/compiler-cli": "^14.2.12",
     "@angular/language-service": "14.2.12",
+    "@faker-js/faker": "^10.3.0",
     "@fortawesome/fontawesome-free": "^5.2.0",
+    "@playwright/test": "^1.58.1",
     "@types/leaflet": "1.2.3",
     "@types/node": "^12.12.70",
     "codelyzer": "^0.0.28",
