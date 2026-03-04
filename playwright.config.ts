@@ -38,18 +38,23 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
-    // baseURL: 'http://localhost:3000',
+    //  baseURL: 'https://keycloak-test.itinera-risksolutions.de/realms/risksolutions/protocol/openid-connect/auth?response_type=code&client_id=finanziererportal-frontend&scope=openid%20profile%20roles&state=8b8m1L_CMRNzQdJPh0Mxvw5Y3DnhWQXN5SwwHSq5Flk%3D&redirect_uri=https://finanziererportal-test.itinera-risksolutions.de/login/oauth2/code/keycloak&nonce=uE2oxIkyI8dQfn2FHpDz2TUuLaxijRYuPxNjPQjB9XA',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
      screenshot: "only-on-failure",
+     viewport: null,
   },
 
   /* Configure projects for major browsers */
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: {
+        browserName: 'chromium',
+        viewport: null,
+        launchOptions: { args: ['--start-maximized'] },
+      },
     },
 
     {
@@ -90,3 +95,7 @@ export default defineConfig({
   //   reuseExistingServer: !process.env.CI,
   // },
 });
+
+
+
+
